@@ -22,7 +22,7 @@ public class BookController : ControllerBase
             return NotFound("Not found book with given id - {id}");
         };
         
-        return Ok();
+        return Ok(_bookRepo.getBookGenresById(id));
     }
 //Nie dziala Task w metodzie, jezeli rozkomentowac to podswieca blad :(
     /*[HttpPost]
